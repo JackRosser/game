@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { AllcardsService } from '../../../services/allcards.service';
 import { iMonster } from '../../../models/i-monsters';
 
@@ -12,6 +12,16 @@ export class CardSelectComponent {
 constructor(private allSvc:AllcardsService) {}
 
 cardsList!:iMonster[]
+
+cardActive!:iMonster
+
+@Output() cardToDad = new EventEmitter<iMonster>()
+
+
+cardActiveHover(monster:iMonster) {
+  this.cardActive = monster
+  this.cardToDad.emit(this.cardActive)
+}
 
 ngOnInit() {
   this.allSvc.allCard$.subscribe(allCardsList => {

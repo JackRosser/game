@@ -6,6 +6,7 @@
     *ngFor="let card of cardsList"
     class="flex flex-col border p-3 gap-3 bg-cover bg-center px-5 cursor-pointer hover:brightness-110 active:scale-95 transition-transform duration-300"
     [style.backgroundImage]="'url(' + card.sfondo + ')'"
+    (mouseover)="cardActiveHover(card)"
   >
     <p class="text-center text-white text-xl bg-black border">
       {{ card.name }}

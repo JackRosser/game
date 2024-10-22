@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { iMonster } from '../../models/i-monsters';
 
 @Component({
   selector: 'app-set-deck',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './set-deck.component.scss'
 })
 export class SetDeckComponent {
+
+bigMonster!:iMonster
+
+  bigCard(monster:iMonster) {
+    this.bigMonster = monster
+  }
 
 }
