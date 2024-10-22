@@ -1,9 +1,75 @@
-<ul *ngIf="cardsList.length > 0" class="grid grid-cols-2 gap-2">
+<ul
+  *ngIf="cardsList.length > 0"
+  class="grid grid-cols-2 gap-2 lg:grid-cols-3 xl:grid-cols-4"
+>
   <li
     *ngFor="let card of cardsList"
-    class="flex flex-col border p-5"
+    class="flex flex-col border p-3 gap-3 bg-cover bg-center px-5 cursor-pointer hover:brightness-110 active:scale-95 transition-transform duration-300"
     [style.backgroundImage]="'url(' + card.sfondo + ')'"
   >
-    <img [src]="card.img" [alt]="card.name" class="rounded-xl" />
+    <p class="text-center text-white text-xl bg-black border">
+      {{ card.name }}
+    </p>
+    <img
+      [src]="card.img"
+      [alt]="card.name"
+      class="rounded-xl border shadow-md"
+    />
+    <div class="bg-black p-2 bg-opacity-50 rounded-xl text-white border">
+      <div class="flex justify-center items-center gap-2 mb-4">
+        <div
+          class="flex flex-col justify-center items-center gap-2 xl:flex-row"
+        >
+          <img
+            src="/utilities/icons/arena/hp.webp"
+            alt="hp icon"
+            class="rounded-full max-h-10 shadow-md"
+          />
+          {{ card.hp }}
+        </div>
+        <div
+          class="flex flex-col justify-center items-center gap-2 xl:flex-row"
+        >
+          <img
+            src="/utilities/icons/arena/stamina.webp"
+            alt="hp icon"
+            class="rounded-full max-h-10 shadow-md"
+          />
+          {{ card.stamina }}
+        </div>
+      </div>
+      <div class="flex justify-center items-center gap-5">
+        <div
+          class="flex justify-center items-center flex-col gap-2 xl:flex-row"
+        >
+          <img
+            src="/utilities/icons/arena/atk.webp"
+            alt="hp icon"
+            class="rounded-full max-h-8 shadow-md"
+          />
+          {{ card.atk }}
+        </div>
+        <div
+          class="flex justify-center items-center flex-col gap-2 xl:flex-row"
+        >
+          <img
+            src="/utilities/icons/arena/def.webp"
+            alt="hp icon"
+            class="rounded-full max-h-8 shadow-md"
+          />
+          {{ card.def }}
+        </div>
+        <div
+          class="flex justify-center items-center flex-col gap-2 xl:flex-row"
+        >
+          <img
+            src="/utilities/icons/arena/speed.webp"
+            alt="hp icon"
+            class="rounded-full max-h-8 shadow-md"
+          />
+          {{ card.speed }}
+        </div>
+      </div>
+    </div>
   </li>
 </ul>

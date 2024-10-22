@@ -15,8 +15,9 @@ cardsList!:iMonster[]
 
 ngOnInit() {
   this.allSvc.allCard$.subscribe(allCardsList => {
-this.cardsList = allCardsList
-  })
+    this.cardsList = allCardsList.sort((a, b) => a.name.localeCompare(b.name));
+  });
 }
+
 
 }
