@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AllcardsService } from '../../../services/allcards.service';
+import { iMonster } from '../../../models/i-monsters';
 
 @Component({
   selector: 'app-card-select',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrl: './card-select.component.scss'
 })
 export class CardSelectComponent {
+
+constructor(private allSvc:AllcardsService) {}
+
+cardsList!:iMonster[]
+
+ngOnInit() {
+  this.allSvc.allCard$.subscribe(allCardsList => {
+this.cardsList = allCardsList
+  })
+}
 
 }
