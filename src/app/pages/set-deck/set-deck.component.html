@@ -1,1 +1,14 @@
 <app-navbar></app-navbar>
+<section class="flex border w-full h-full flex-col">
+  <div class="bg-red-500 hidden md:block md:h-1/2">
+    <app-view-details></app-view-details>
+  </div>
+  <div class="flex w-full h-full flex-col md:flex-row md:h-1/2">
+    <div class="bg-orange-500 w-full h-1/2 md:w-1/2 md:h-full">
+      <app-deck-central></app-deck-central>
+    </div>
+    <div class="bg-blue-500 w-full h-1/2 md:w-1/2 md:h-full">
+      <app-card-select></app-card-select>
+    </div>
+  </div>
+</section>
