@@ -1,5 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+// .cinzel-<uniquifier> {
+//   font-family: "Cinzel", serif;
+//   font-optical-sizing: auto;
+//   font-weight: <weight>;
+//   font-style: normal;
+// }
+
+// .roboto-thin {
+//   font-family: "Roboto", sans-serif;
+//   font-weight: 100;
+//   font-style: normal;
+// }
+
+/* La parte generale della scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* La parte che si muove (il "pollice") */
+::-webkit-scrollbar-thumb {
+  background-color: greenyellow;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px rgb(0, 187, 28);
+}
+
+/* Parte di sfondo della scrollbar */
+::-webkit-scrollbar-track {
+  background: rgb(73, 73, 73);
+}
+
+body {
+  background-color: black;
+}
+
 main {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  font-family: "Cinzel", serif;
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { StartPageRoutingModule } from './start-page-routing.module';
 import { StartPageComponent } from './start-page.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { StartPageComponent } from './start-page.component';
   ],
   imports: [
     CommonModule,
-    StartPageRoutingModule
+    StartPageRoutingModule,
+    FormsModule
   ]
 })
 export class StartPageModule { }

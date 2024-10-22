@@ -7,12 +7,44 @@
   class="w-full h-full object-cover"
 ></video>
 <div
-  class="absolute top-0 flex flex-col justify-center items-center gap-[5rem] h-full w-full p-5"
+  class="absolute top-0 flex flex-col justify-center items-center gap-[2rem] h-full w-full p-5"
 >
   <img src="/utilities/logo.png" alt="icongame" class="rounded-full" />
-  <button
-    class="border px-[3rem] py-2 rounded-xl bg-green-500 text-white lg:hover:scale-150 transition-transform duration-300 active:bg-orange-400"
-  >
-    <a routerLink="/set-deck">Nuova Partita</a>
-  </button>
+  <div *ngIf="toggleNewGame" class="flex flex-col gap-7">
+    <button
+      class="border px-[3rem] py-2 rounded-xl bg-green-500 text-white lg:hover:scale-150 transition-transform duration-300 active:bg-yellow-200 active:text-black"
+      (click)="newUser()"
+    >
+      Nuova Partita
+    </button>
+    <button
+      class="border px-[3rem] py-2 rounded-xl bg-orange-400 text-white lg:hover:scale-150 transition-transform duration-300 active:bg-yellow-200 active:text-black"
+    >
+      Continua
+    </button>
+  </div>
+  <form *ngIf="toggleInsertUser" class="flex flex-col gap-5 items-center">
+    <input
+      type="text"
+      [(ngModel)]="user.nickname"
+      class="text-center outline-none p-4 rounded-xl bg-green-500 placeholder:text-slate-600 placeholder:italic"
+      placeholder="Inserisci nickname..."
+      [required]="required"
+      (input)="addNick()"
+      name="nick"
+    />
+    <input
+      type="text"
+      [(ngModel)]="user.avatar"
+      class="text-center outline-none p-4 rounded-xl bg-green-500 placeholder:text-slate-600 placeholder:italic"
+      placeholder="Inserisci link avatar..."
+      name="avatar"
+    />
+    <button
+      class="p-4 rounded-xl bg-red-500 hover:bg-red-300 active:bg-green-500"
+      *ngIf="required"
+    >
+      <a routerLink="/set-deck" (click)="startGame()">Inizia!</a>
+    </button>
+  </form>
 </div>

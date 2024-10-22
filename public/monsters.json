@@ -1,7 +1,7 @@
 {
   "monsters": [
     {
-      "id": 0,
+      "id": "0",
       "name": "Lithogron",
       "type": "terra",
       "description": "Un gigante della terra, capace di incassare danni immani grazie alla sua pelle rocciosa.",
@@ -23,7 +23,7 @@
       "forza": "erba"
     },
     {
-      "id": 1,
+      "id": "1",
       "name": "Terradon",
       "type": "terra",
       "description": "Creatura antica che rappresenta l'equilibrio e la forza della natura stessa.",
@@ -45,7 +45,7 @@
       "forza": "erba"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Golemath",
       "type": "terra",
       "description": "Un possente mostro corazzato, famoso per la sua forza devastante e la difesa impenetrabile.",
@@ -67,7 +67,7 @@
       "forza": "erba"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Cragthorn",
       "type": "terra",
       "description": "Il guardiano della terra, conosciuto per la sua resistenza incrollabile.",
@@ -89,7 +89,7 @@
       "forza": "erba"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Stonereaver",
       "type": "terra",
       "description": "Un gigante della terra, capace di incassare danni immani grazie alla sua pelle rocciosa.",
@@ -111,7 +111,7 @@
       "forza": "erba"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Geomantor",
       "type": "terra",
       "description": "Creatura antica che rappresenta l'equilibrio e la forza della natura stessa.",
@@ -133,7 +133,7 @@
       "forza": "erba"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Earthshade",
       "type": "terra",
       "description": "Un possente mostro corazzato, famoso per la sua forza devastante e la difesa impenetrabile.",
@@ -155,7 +155,7 @@
       "forza": "erba"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Quarrok",
       "type": "terra",
       "description": "Il guardiano della terra, conosciuto per la sua resistenza incrollabile.",
@@ -177,7 +177,7 @@
       "forza": "erba"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Dustfang",
       "type": "terra",
       "description": "Un gigante della terra, capace di incassare danni immani grazie alla sua pelle rocciosa.",
@@ -199,7 +199,7 @@
       "forza": "erba"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Boulderguard",
       "type": "terra",
       "description": "Creatura antica che rappresenta l'equilibrio e la forza della natura stessa.",
@@ -221,7 +221,7 @@
       "forza": "erba"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Tremorspire",
       "type": "terra",
       "description": "Un possente mostro corazzato, famoso per la sua forza devastante e la difesa impenetrabile.",
@@ -243,7 +243,7 @@
       "forza": "erba"
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Gravelock",
       "type": "terra",
       "description": "Il guardiano della terra, conosciuto per la sua resistenza incrollabile.",
@@ -265,7 +265,7 @@
       "forza": "erba"
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Petrathor",
       "type": "terra",
       "description": "Un gigante della terra, capace di incassare danni immani grazie alla sua pelle rocciosa.",
@@ -287,7 +287,7 @@
       "forza": "erba"
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Rockbane",
       "type": "terra",
       "description": "Creatura antica che rappresenta l'equilibrio e la forza della natura stessa.",
@@ -309,7 +309,7 @@
       "forza": "erba"
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Stoneclad",
       "type": "terra",
       "description": "Un possente mostro corazzato, famoso per la sua forza devastante e la difesa impenetrabile.",
@@ -331,7 +331,7 @@
       "forza": "erba"
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Leafthorn",
       "type": "erba",
       "description": "Creatura spinosissima che difende il suo territorio con una corazza vegetale impenetrabile.",
@@ -353,7 +353,7 @@
       "forza": "acqua"
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Verdalis",
       "type": "erba",
       "description": "Un'entità antica delle foreste, avvolta in un'armatura fatta di radici e foglie.",
@@ -375,7 +375,7 @@
       "forza": "acqua"
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Mossfang",
       "type": "erba",
       "description": "Una bestia ricoperta di spine velenose, temuta per la sua capacità di intrappolare chiunque si avvicini.",
@@ -397,7 +397,7 @@
       "forza": "acqua"
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Bramblehorn",
       "type": "erba",
       "description": "Un guerriero delle foreste che si muove agilmente tra gli alberi, pronto a difendere il suo habitat.",
@@ -419,7 +419,7 @@
       "forza": "acqua"
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Sylvaris",
       "type": "erba",
       "description": "Creatura spinosissima che difende il suo territorio con una corazza vegetale impenetrabile.",
@@ -441,7 +441,7 @@
       "forza": "acqua"
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Vineclaw",
       "type": "erba",
       "description": "Un'entità antica delle foreste, avvolta in un'armatura fatta di radici e foglie.",
@@ -463,7 +463,7 @@
       "forza": "acqua"
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Floraspike",
       "type": "erba",
       "description": "Una bestia ricoperta di spine velenose, temuta per la sua capacità di intrappolare chiunque si avvicini.",
@@ -485,7 +485,7 @@
       "forza": "acqua"
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "Thornroot",
       "type": "erba",
       "description": "Un guerriero delle foreste che si muove agilmente tra gli alberi, pronto a difendere il suo habitat.",
@@ -507,7 +507,7 @@
       "forza": "acqua"
     },
     {
-      "id": 23,
+      "id": "23",
       "name": "Greenstalker",
       "type": "erba",
       "description": "Creatura spinosissima che difende il suo territorio con una corazza vegetale impenetrabile.",
@@ -529,7 +529,7 @@
       "forza": "acqua"
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "Petalbane",
       "type": "erba",
       "description": "Un'entità antica delle foreste, avvolta in un'armatura fatta di radici e foglie.",
@@ -551,7 +551,7 @@
       "forza": "acqua"
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "Wildgrove",
       "type": "erba",
       "description": "Una bestia ricoperta di spine velenose, temuta per la sua capacità di intrappolare chiunque si avvicini.",
@@ -573,7 +573,7 @@
       "forza": "acqua"
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "Feralvine",
       "type": "erba",
       "description": "Un guerriero delle foreste che si muove agilmente tra gli alberi, pronto a difendere il suo habitat.",
@@ -595,7 +595,7 @@
       "forza": "acqua"
     },
     {
-      "id": 27,
+      "id": "27",
       "name": "Lushrend",
       "type": "erba",
       "description": "Creatura spinosissima che difende il suo territorio con una corazza vegetale impenetrabile.",
@@ -617,7 +617,7 @@
       "forza": "acqua"
     },
     {
-      "id": 28,
+      "id": "28",
       "name": "Ivyshade",
       "type": "erba",
       "description": "Un'entità antica delle foreste, avvolta in un'armatura fatta di radici e foglie.",
@@ -639,7 +639,7 @@
       "forza": "acqua"
     },
     {
-      "id": 29,
+      "id": "29",
       "name": "Bloomclaw",
       "type": "erba",
       "description": "Una bestia ricoperta di spine velenose, temuta per la sua capacità di intrappolare chiunque si avvicini.",
@@ -661,7 +661,7 @@
       "forza": "acqua"
     },
     {
-      "id": 30,
+      "id": "30",
       "name": "Ignisfang",
       "type": "fuoco",
       "description": "Un drago possente che incenerisce tutto ciò che tocca con le sue fiamme furiose.",
@@ -683,7 +683,7 @@
       "forza": "vento"
     },
     {
-      "id": 31,
+      "id": "31",
       "name": "Pyroclaw",
       "type": "fuoco",
       "description": "Il sovrano dei vulcani, capace di scatenare eruzioni di fuoco con un solo ruggito.",
@@ -705,7 +705,7 @@
       "forza": "vento"
     },
     {
-      "id": 32,
+      "id": "32",
       "name": "Ignis",
       "type": "fuoco",
       "description": "Una creatura infuocata che vive tra le fiamme eterne, bruciando ogni ostacolo nel suo cammino.",
@@ -727,7 +727,7 @@
       "forza": "vento"
     },
     {
-      "id": 33,
+      "id": "33",
       "name": "Emberhorn",
       "type": "fuoco",
       "description": "Un antico spirito del fuoco, dotato di una potenza distruttiva senza eguali.",
@@ -749,7 +749,7 @@
       "forza": "vento"
     },
     {
-      "id": 34,
+      "id": "34",
       "name": "Flarewing",
       "type": "fuoco",
       "description": "Un drago possente che incenerisce tutto ciò che tocca con le sue fiamme furiose.",
@@ -771,7 +771,7 @@
       "forza": "vento"
     },
     {
-      "id": 35,
+      "id": "35",
       "name": "Infernos",
       "type": "fuoco",
       "description": "Il sovrano dei vulcani, capace di scatenare eruzioni di fuoco con un solo ruggito.",
@@ -793,7 +793,7 @@
       "forza": "vento"
     },
     {
-      "id": 36,
+      "id": "36",
       "name": "Cinderdrake",
       "type": "fuoco",
       "description": "Una creatura infuocata che vive tra le fiamme eterne, bruciando ogni ostacolo nel suo cammino.",
@@ -815,7 +815,7 @@
       "forza": "vento"
     },
     {
-      "id": 37,
+      "id": "37",
       "name": "Blazefang",
       "type": "fuoco",
       "description": "Un antico spirito del fuoco, dotato di una potenza distruttiva senza eguali.",
@@ -837,7 +837,7 @@
       "forza": "vento"
     },
     {
-      "id": 38,
+      "id": "38",
       "name": "Scorchblade",
       "type": "fuoco",
       "description": "Un drago possente che incenerisce tutto ciò che tocca con le sue fiamme furiose.",
@@ -859,7 +859,7 @@
       "forza": "vento"
     },
     {
-      "id": 39,
+      "id": "39",
       "name": "Volcandor",
       "type": "fuoco",
       "description": "Il sovrano dei vulcani, capace di scatenare eruzioni di fuoco con un solo ruggito.",
@@ -881,7 +881,7 @@
       "forza": "vento"
     },
     {
-      "id": 40,
+      "id": "40",
       "name": "Ashenmaw",
       "type": "fuoco",
       "description": "Una creatura infuocata che vive tra le fiamme eterne, bruciando ogni ostacolo nel suo cammino.",
@@ -903,7 +903,7 @@
       "forza": "vento"
     },
     {
-      "id": 41,
+      "id": "41",
       "name": "Flametalon",
       "type": "fuoco",
       "description": "Un antico spirito del fuoco, dotato di una potenza distruttiva senza eguali.",
@@ -925,7 +925,7 @@
       "forza": "vento"
     },
     {
-      "id": 42,
+      "id": "42",
       "name": "Moltenhide",
       "type": "fuoco",
       "description": "Un drago possente che incenerisce tutto ciò che tocca con le sue fiamme furiose.",
@@ -947,7 +947,7 @@
       "forza": "vento"
     },
     {
-      "id": 43,
+      "id": "43",
       "name": "Volcanor",
       "type": "fuoco",
       "description": "Il sovrano dei vulcani, capace di scatenare eruzioni di fuoco con un solo ruggito.",
@@ -969,7 +969,7 @@
       "forza": "vento"
     },
     {
-      "id": 44,
+      "id": "44",
       "name": "Cremsis",
       "type": "fuoco",
       "description": "Una creatura infuocata che vive tra le fiamme eterne, bruciando ogni ostacolo nel suo cammino.",
@@ -991,7 +991,7 @@
       "forza": "vento"
     },
     {
-      "id": 45,
+      "id": "45",
       "name": "Aeris",
       "type": "vento",
       "description": "Un essere leggero come l'aria, capace di spostarsi con una velocità fulminea tra le correnti.",
@@ -1013,7 +1013,7 @@
       "forza": "terra"
     },
     {
-      "id": 46,
+      "id": "46",
       "name": "Stormwing",
       "type": "vento",
       "description": "Creatura dei cieli tempestosi, evoca tornado con un battito d'ali.",
@@ -1035,7 +1035,7 @@
       "forza": "terra"
     },
     {
-      "id": 47,
+      "id": "47",
       "name": "Tempesking",
       "type": "vento",
       "description": "La furia del vento incanalata in una forma mostruosa, in grado di abbattere intere città.",
@@ -1057,7 +1057,7 @@
       "forza": "terra"
     },
     {
-      "id": 48,
+      "id": "48",
       "name": "Zephiron",
       "type": "vento",
       "description": "Un'entità aerea che domina i cieli con il controllo delle correnti e delle tempeste.",
@@ -1079,7 +1079,7 @@
       "forza": "terra"
     },
     {
-      "id": 49,
+      "id": "49",
       "name": "Galeclaw",
       "type": "vento",
       "description": "Un essere leggero come l'aria, capace di spostarsi con una velocità fulminea tra le correnti.",
@@ -1101,7 +1101,7 @@
       "forza": "terra"
     },
     {
-      "id": 50,
+      "id": "50",
       "name": "Cyclonix",
       "type": "vento",
       "description": "Creatura dei cieli tempestosi, evoca tornado con un battito d'ali.",
@@ -1123,7 +1123,7 @@
       "forza": "terra"
     },
     {
-      "id": 51,
+      "id": "51",
       "name": "Airstalker",
       "type": "vento",
       "description": "La furia del vento incanalata in una forma mostruosa, in grado di abbattere intere città.",
@@ -1145,7 +1145,7 @@
       "forza": "terra"
     },
     {
-      "id": 52,
+      "id": "52",
       "name": "Gustfang",
       "type": "vento",
       "description": "Un'entità aerea che domina i cieli con il controllo delle correnti e delle tempeste.",
@@ -1167,7 +1167,7 @@
       "forza": "terra"
     },
     {
-      "id": 53,
+      "id": "53",
       "name": "Windshadow",
       "type": "vento",
       "description": "Un essere leggero come l'aria, capace di spostarsi con una velocità fulminea tra le correnti.",
@@ -1189,7 +1189,7 @@
       "forza": "terra"
     },
     {
-      "id": 54,
+      "id": "54",
       "name": "Swiftgale",
       "type": "vento",
       "description": "Creatura dei cieli tempestosi, evoca tornado con un battito d'ali.",
@@ -1211,7 +1211,7 @@
       "forza": "terra"
     },
     {
-      "id": 55,
+      "id": "55",
       "name": "Skyreaver",
       "type": "legendary",
       "description": "Una creatura leggendaria, con una forza titanica e poteri oltre ogni comprensione umana.",
@@ -1233,7 +1233,7 @@
       "forza": "tutto"
     },
     {
-      "id": 56,
+      "id": "56",
       "name": "Antik",
       "type": "legendary",
       "description": "Un drago antico e maestoso, venerato come un dio da chiunque lo incontri.",
@@ -1255,7 +1255,7 @@
       "forza": "tutto"
     },
     {
-      "id": 57,
+      "id": "57",
       "name": "Solvatar",
       "type": "legendary",
       "description": "Il portatore di luce leggendario, dotato di poteri solari ineguagliabili che bruciano i suoi nemici.",
@@ -1277,7 +1277,7 @@
       "forza": "tutto"
     },
     {
-      "id": 58,
+      "id": "58",
       "name": "Ramaugh",
       "type": "legendary",
       "description": "Una creatura celestiale, nata tra le stelle e capace di scatenare l'ira dei cieli.",
@@ -1299,7 +1299,7 @@
       "forza": "tutto"
     },
     {
-      "id": 59,
+      "id": "59",
       "name": "Absolutes",
       "type": "legendary",
       "description": "Una creatura leggendaria, con una forza titanica e poteri oltre ogni comprensione umana.",
@@ -1321,7 +1321,7 @@
       "forza": "tutto"
     },
     {
-      "id": 60,
+      "id": "60",
       "name": "Aqualon",
       "type": "acqua",
       "description": "Signore delle profondità, nuota agilmente negli oceani grazie alla sua forza sovrumana.",
@@ -1343,7 +1343,7 @@
       "forza": "fuoco"
     },
     {
-      "id": 61,
+      "id": "61",
       "name": "Hydran",
       "type": "acqua",
       "description": "Una creatura acquatica con molte teste, ogni una delle quali emette un potente getto d'acqua.",
@@ -1365,7 +1365,7 @@
       "forza": "fuoco"
     },
     {
-      "id": 62,
+      "id": "62",
       "name": "Tidalclaw",
       "type": "acqua",
       "description": "Creatura marina con una resistenza incredibile, conosciuta per la sua capacità di adattarsi a qualsiasi ambiente.",
@@ -1387,7 +1387,7 @@
       "forza": "fuoco"
     },
     {
-      "id": 63,
+      "id": "63",
       "name": "Nautilus",
       "type": "acqua",
       "description": "Un colosso dei mari, si muove lentamente ma con una potenza devastante che fa tremare le acque.",
@@ -1409,7 +1409,7 @@
       "forza": "fuoco"
     },
     {
-      "id": 64,
+      "id": "64",
       "name": "Hydroscale",
       "type": "acqua",
       "description": "Signore delle profondità, nuota agilmente negli oceani grazie alla sua forza sovrumana.",
@@ -1431,7 +1431,7 @@
       "forza": "fuoco"
     },
     {
-      "id": 65,
+      "id": "65",
       "name": "Brineshade",
       "type": "acqua",
       "description": "Una creatura acquatica con molte teste, ogni una delle quali emette un potente getto d'acqua.",
@@ -1453,7 +1453,7 @@
       "forza": "fuoco"
     },
     {
-      "id": 66,
+      "id": "66",
       "name": "Maridorn",
       "type": "acqua",
       "description": "Creatura marina con una resistenza incredibile, conosciuta per la sua capacità di adattarsi a qualsiasi ambiente.",
@@ -1475,7 +1475,7 @@
       "forza": "fuoco"
     },
     {
-      "id": 67,
+      "id": "67",
       "name": "Riptidefang",
       "type": "acqua",
       "description": "Un colosso dei mari, si muove lentamente ma con una potenza devastante che fa tremare le acque.",
@@ -1497,7 +1497,7 @@
       "forza": "fuoco"
     },
     {
-      "id": 68,
+      "id": "68",
       "name": "Deepmaw",
       "type": "acqua",
       "description": "Signore delle profondità, nuota agilmente negli oceani grazie alla sua forza sovrumana.",
@@ -1519,7 +1519,7 @@
       "forza": "fuoco"
     },
     {
-      "id": 69,
+      "id": "69",
       "name": "Coralisk",
       "type": "acqua",
       "description": "Una creatura acquatica con molte teste, ogni una delle quali emette un potente getto d'acqua.",
@@ -1541,7 +1541,7 @@
       "forza": "fuoco"
     },
     {
-      "id": 70,
+      "id": "70",
       "name": "Driftwave",
       "type": "acqua",
       "description": "Creatura marina con una resistenza incredibile, conosciuta per la sua capacità di adattarsi a qualsiasi ambiente.",
@@ -1563,7 +1563,7 @@
       "forza": "fuoco"
     },
     {
-      "id": 71,
+      "id": "71",
       "name": "Stormswell",
       "type": "acqua",
       "description": "Un colosso dei mari, si muove lentamente ma con una potenza devastante che fa tremare le acque.",
@@ -1585,7 +1585,7 @@
       "forza": "fuoco"
     },
     {
-      "id": 72,
+      "id": "72",
       "name": "Tidewarden",
       "type": "acqua",
       "description": "Signore delle profondità, nuota agilmente negli oceani grazie alla sua forza sovrumana.",
@@ -1607,7 +1607,7 @@
       "forza": "fuoco"
     },
     {
-      "id": 73,
+      "id": "73",
       "name": "Deepleep",
       "type": "acqua",
       "description": "Una creatura acquatica con molte teste, ogni una delle quali emette un potente getto d'acqua.",
@@ -1629,7 +1629,7 @@
       "forza": "fuoco"
     },
     {
-      "id": 74,
+      "id": "74",
       "name": "Waveking",
       "type": "acqua",
       "description": "Creatura marina con una resistenza incredibile, conosciuta per la sua capacità di adattarsi a qualsiasi ambiente.",
@@ -1652,6 +1652,5 @@
     }
   ],
   "deckPlayer": [],
-  "deckOpponent": [],
-  "user":[]
+  "deckOpponent": []
 }
