@@ -4,7 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
   path: "",
-  redirectTo: "start-page",
+  // redirectTo: "start-page",
+  redirectTo: "set-deck",
   pathMatch: "full",
   },
   { path: 'start-page',
