@@ -13,12 +13,14 @@ export class CardSelectComponent {
   constructor(private allSvc: AllcardsService, private deckSvc: DeckService) {}
 
   cardsList!: iMonster[];
+  cardListClone!: iMonster[]
   cardActive!: iMonster;
 
   @Output() sendCounter = new EventEmitter<number>();
   @Output() cardToDad = new EventEmitter<iMonster>();
   @Input() monsterToLeaveYellow!: iMonster;
   @Input() deckCounter!: number;
+@Input() iconImported!:string
 
   alertTooManyCards: boolean = false;
 
@@ -51,6 +53,7 @@ export class CardSelectComponent {
   ngOnInit() {
     this.allSvc.allCard$.subscribe(allCardsList => {
       this.cardsList = allCardsList.sort((a, b) => a.name.localeCompare(b.name));
+      this.cardListClone = allCardsList.sort((a, b) => a.name.localeCompare(b.name));
     });
   }
 
@@ -64,9 +67,17 @@ export class CardSelectComponent {
       });
     }
 
-
     if (changes['deckCounter']) {
       this.deckCounter = changes['deckCounter'].currentValue;
     }
+
+    if (changes['iconImported'] && this.iconImported) {
+      if (this.iconImported === 'all') {
+        this.cardsList = this.cardListClone
+      } else {
+        this.cardsList = this.cardListClone.filter(card => `/${card.icon}` === this.iconImported);
+      }
+    }
   }
+
 }

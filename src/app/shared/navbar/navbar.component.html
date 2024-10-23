@@ -1,12 +1,27 @@
 <nav
-  class="fixed top-0 w-full flex justify-end items-center text-center text-white gap-5 py-5 px-5 md:px-10 lg:px-[5rem] z-50"
+  class="fixed top-0 w-full flex flex-wrap justify-center items-center text-center lg:justify-end text-white gap-5 py-5 px-5 md:px-10 lg:px-[5rem] z-50"
 >
-  <div class="flex gap-5 items-center">
+  <img
+    *ngFor="let icon of icons"
+    [attr.src]="icon"
+    alt="icon"
+    class="rounded-full max-h-10 cursor-pointer hover:scale-125 hover:rotate-45 transition-transform duration-300"
+    (click)="setAttribute(icon)"
+  />
+  <img
+    src="/utilities/icons/all.webp"
+    alt="icon"
+    class="rounded-full max-h-10 cursor-pointer hover:scale-125 hover:rotate-45 transition-transform duration-300"
+    (click)="setAttribute('all')"
+  />
+
+  <!-- TODO generazione user, prima o poi ci farò qualcosa -->
+  <!-- <div class="flex gap-5 items-center">
     {{ user.nickname }}
     <img
       [src]="user.avatar"
       alt="imgnick"
       class="rounded-full max-h-10 outline-white outline-offset-2 outline-double outline-2"
     />
-  </div>
+  </div> -->
 </nav>

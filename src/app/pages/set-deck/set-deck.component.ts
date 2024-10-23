@@ -23,6 +23,13 @@ this.deckCounter = counter
     this.bigMonster = monster
   }
 
+iconImported!:string
+
+  setAttribute(icon:string) {
+this.iconImported = icon
+  }
+
+
 deckCounter:number = 0
 
 counter(count:number) {
