@@ -13,10 +13,9 @@ background:string = "url(/utilities/logo.png)"
 
 monsterToLeaveYellow!:iMonster
 
-secondCounter!:number
-
-notYellow(monster:iMonster) {
+notYellow(monster:iMonster, counter:number) {
 this.monsterToLeaveYellow = monster
+this.deckCounter = counter
 
 }
 

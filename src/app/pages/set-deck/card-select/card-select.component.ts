@@ -10,63 +10,63 @@ import { DeckService } from '../../../services/deck.service';
 })
 export class CardSelectComponent {
 
-constructor(private allSvc:AllcardsService, private deckSvc:DeckService) {}
+  constructor(private allSvc: AllcardsService, private deckSvc: DeckService) {}
 
-cardsList!:iMonster[]
+  cardsList!: iMonster[];
+  cardActive!: iMonster;
 
-cardActive!:iMonster
+  @Output() sendCounter = new EventEmitter<number>();
+  @Output() cardToDad = new EventEmitter<iMonster>();
+  @Input() monsterToLeaveYellow!: iMonster;
+  @Input() deckCounter!: number;
 
-@Output() sendCounter = new EventEmitter<number>()
-@Output() cardToDad = new EventEmitter<iMonster>()
-@Input() monsterToLeaveYellow!:iMonster
+  alertTooManyCards: boolean = false;
 
-cardActiveHover(monster:iMonster) {
-  this.cardActive = monster
-  this.cardToDad.emit(this.cardActive)
-}
-
-deckCounter:number = 0
-
-alertTooManyCards:boolean = false
-
-selected(card: iMonster): void {
-  if (card.indeck === false && this.deckCounter === 6) {
-    this.alertTooManyCards = true;
-    return;
+  cardActiveHover(monster: iMonster) {
+    this.cardActive = monster;
+    this.cardToDad.emit(this.cardActive);
   }
-  card.indeck = !card.indeck;
 
-  if (card.indeck) {
-    this.deckSvc.addCard(card);
-    this.deckCounter++;
-  } else {
-    this.deckSvc.removeCard(card.id);
-    this.deckCounter--;
+  selected(card: iMonster): void {
+    if (card.indeck === false && this.deckCounter === 6) {
+      this.alertTooManyCards = true;
+      return;
+    }
+    card.indeck = !card.indeck;
+
+    if (card.indeck) {
+      this.deckSvc.addCard(card);
+      this.deckCounter++;
+    } else {
+      this.deckSvc.removeCard(card.id);
+      this.deckCounter--;
+    }
+    this.sendCounter.emit(this.deckCounter);
   }
-  this.sendCounter.emit(this.deckCounter);
-}
 
+  closeBtn(): void {
+    this.alertTooManyCards = !this.alertTooManyCards;
+  }
 
-closeBtn():void {
-  this.alertTooManyCards = !this.alertTooManyCards
-}
-
-ngOnInit() {
-  this.allSvc.allCard$.subscribe(allCardsList => {
-    this.cardsList = allCardsList.sort((a, b) => a.name.localeCompare(b.name));
-  });
-}
-
-//questa funzione per togliere il bordo giall alla card selezionata
-
-ngOnChanges(changes: SimpleChanges) {
-  if (changes['monsterToLeaveYellow'] && this.monsterToLeaveYellow) {
-    this.cardsList.forEach(card => {
-      if (card.id === this.monsterToLeaveYellow.id) {
-        card.indeck = false;
-      }
+  ngOnInit() {
+    this.allSvc.allCard$.subscribe(allCardsList => {
+      this.cardsList = allCardsList.sort((a, b) => a.name.localeCompare(b.name));
     });
   }
-}
 
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['monsterToLeaveYellow'] && this.monsterToLeaveYellow) {
+      this.cardsList.forEach(card => {
+        if (card.id === this.monsterToLeaveYellow.id) {
+          card.indeck = false;
+        }
+      });
+    }
+
+
+    if (changes['deckCounter']) {
+      this.deckCounter = changes['deckCounter'].currentValue;
+    }
+  }
 }

@@ -1,6 +1,7 @@
+import { iMonster } from './../../../models/i-monsters';
 import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
 import { DeckService } from '../../../services/deck.service';
-import { iMonster } from '../../../models/i-monsters';
+
 
 @Component({
   selector: 'app-deck-central',
@@ -16,8 +17,7 @@ deck!:iMonster[]
 monsterRemoved!: iMonster
 
 @Input() deckCounter!:number
-
-@Output() sendRemovedFromDeck = new EventEmitter<iMonster>
+@Output() sendRemovedFromDeck = new EventEmitter<{monster:iMonster, counter:number}>()
 
 
 
@@ -27,8 +27,10 @@ this.deckSvc.removeCard(card.id)
 this.monsterRemoved = card
 this.startGame = !this.startGame
 this.deckCounter--
-this.sendRemovedFromDeck.emit(this.monsterRemoved)
-
+this.sendRemovedFromDeck.emit({
+  monster: this.monsterRemoved,
+  counter: this.deckCounter
+})
 }
 
 ngOnInit() {
