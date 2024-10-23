@@ -8,10 +8,17 @@
       class="w-full h-1/2 md:w-1/2 md:h-full lg:w-1/3 p-3 bg-contain bg-no-repeat bg-center"
       [style.backgroundImage]="background"
     >
-      <app-deck-central></app-deck-central>
+      <app-deck-central
+        (sendRemovedFromDeck)="notYellow($event)"
+        [deckCounter]="deckCounter"
+      ></app-deck-central>
     </div>
     <div class="w-full h-1/2 md:w-1/2 md:h-full overflow-auto px-3 lg:w-2/3">
-      <app-card-select (cardToDad)="bigCard($event)"></app-card-select>
+      <app-card-select
+        [monsterToLeaveYellow]="monsterToLeaveYellow"
+        (cardToDad)="bigCard($event)"
+        (sendCounter)="counter($event)"
+      ></app-card-select>
     </div>
   </div>
 </section>

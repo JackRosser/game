@@ -1651,6 +1651,51 @@
       "forza": "fuoco"
     }
   ],
-  "deckPlayer": [],
+  "deckPlayer": [
+    {
+      "id": "59",
+      "name": "Absolutes",
+      "type": "legendary",
+      "description": "Una creatura leggendaria, con una forza titanica e poteri oltre ogni comprensione umana.",
+      "principale": "atk",
+      "minore": "speed",
+      "barraHp": 100,
+      "barraStamina": 100,
+      "hp": 90,
+      "atk": 95,
+      "def": 55,
+      "speed": 45,
+      "stamina": 65,
+      "img": "monsters/legendary/4c01b5f3-720e-412d-8747-f48335fdc3af.webp",
+      "icon": "utilities/icons/legendary.webp",
+      "locked": false,
+      "indeck": true,
+      "sfondo": "utilities/icons/arena/sfondi/legendary.webp",
+      "debolezza": "niente",
+      "forza": "tutto"
+    },
+    {
+      "id": "45",
+      "name": "Aeris",
+      "type": "vento",
+      "description": "Un essere leggero come l'aria, capace di spostarsi con una velocità fulminea tra le correnti.",
+      "principale": "speed",
+      "minore": "hp",
+      "barraHp": 100,
+      "barraStamina": 100,
+      "hp": 20,
+      "atk": 80,
+      "def": 30,
+      "speed": 145,
+      "stamina": 85,
+      "img": "monsters/vento/482ef84b-c814-423f-ad19-a59edd6dbe4a.webp",
+      "icon": "utilities/icons/vento.webp",
+      "locked": false,
+      "indeck": true,
+      "sfondo": "utilities/icons/arena/sfondi/vento.webp",
+      "debolezza": "fuoco",
+      "forza": "terra"
+    }
+  ],
   "deckOpponent": []
 }
