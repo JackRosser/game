@@ -13,6 +13,11 @@ constructor(private deckSvc:DeckService) {}
 
 deck!:iMonster[]
 
+removeFromDeck(card:iMonster) {
+card.indeck = !card.indeck
+this.deckSvc.removeCard(card.id)
+}
+
 ngOnInit() {
   this.deckSvc.deck$.subscribe(list => {
     this.deck = list

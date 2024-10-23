@@ -1,6 +1,19 @@
-<ul *ngIf="deck.length > 0" class="grid grid-cols-3 gap-3">
-  <li *ngFor="let card of deck" class="border">
-    <h2>{{ card.name }}</h2>
-    <img [src]="card.img" alt="{{ card.name }}" class="max-w-full" />
-  </li>
-</ul>
+<div *ngIf="deck.length > 0" class="h-full flex items-end md:items-start">
+  <ul class="grid grid-cols-3 gap-3 xl:grid-cols-4">
+    <li
+      *ngFor="let card of deck"
+      class="flex flex-col items-center bg-black border shadow-md cursor-pointer hover:border-yellow-300 hover:border-[2px]"
+      (click)="removeFromDeck(card)"
+    >
+      <h2 class="text-white">{{ card.name }}</h2>
+      <img [src]="card.img" alt="{{ card.name }}" class="max-w-full" />
+    </li>
+    <li>
+      <button
+        class="p-2 bg-white hover:scale-110 transition-transform duration-300 hover:bg-slate-700 hover:text-white hover:border active:bg-white active:text-black"
+      >
+        Vai all'arena!
+      </button>
+    </li>
+  </ul>
+</div>

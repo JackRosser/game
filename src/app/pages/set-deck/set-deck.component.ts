@@ -9,6 +9,7 @@ import { iMonster } from '../../models/i-monsters';
 export class SetDeckComponent {
 
 bigMonster!:iMonster
+background:string = "url(/utilities/logo.png)"
 
   bigCard(monster:iMonster) {
     this.bigMonster = monster
