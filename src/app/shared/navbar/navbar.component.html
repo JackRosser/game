@@ -1,11 +1,11 @@
 <nav
-  class="fixed top-0 w-full flex flex-wrap justify-center items-center text-center lg:justify-end text-white gap-5 py-5 px-5 md:px-10 lg:px-[5rem] z-50"
+  class="fixed top-[0] w-full flex flex-wrap justify-center lg:justify-end lg:top-[10%] items-center text-center :justify-end text-white gap-5 py-5 px-5 md:px-10 lg:px-[5rem] z-50"
 >
   <img
     *ngFor="let icon of icons"
     [attr.src]="icon"
     alt="icon"
-    class="rounded-full max-h-10 cursor-pointer hover:scale-125 hover:rotate-45 transition-transform duration-300"
+    class="rounded-full max-h-10 cursor-pointer hover:scale-125 hover:rotate-45 transition-transform duration-300 shadow-lg"
     (click)="setAttribute(icon)"
   />
   <img
