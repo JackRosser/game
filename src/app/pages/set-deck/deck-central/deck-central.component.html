@@ -1,5 +1,6 @@
-<ul *ngIf="deck.length > 0">
-  <li *ngFor="let card of deck">
-    {{ card.name }}
+<ul *ngIf="deck.length > 0" class="grid grid-cols-3 gap-3">
+  <li *ngFor="let card of deck" class="border">
+    <h2>{{ card.name }}</h2>
+    <img [src]="card.img" alt="{{ card.name }}" class="max-w-full" />
   </li>
 </ul>
