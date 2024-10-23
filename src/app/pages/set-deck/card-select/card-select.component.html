@@ -4,74 +4,41 @@
 >
   <li
     *ngFor="let card of cardsList"
-    class="flex flex-col border p-3 gap-3 bg-cover bg-center px-5 cursor-pointer hover:brightness-110 transition-transform duration-100"
-    [style.backgroundImage]="'url(' + card.sfondo + ')'"
+    class="flex flex-col gap-3 bg-cover bg-center cursor-pointer hover:brightness-110 transition-transform duration-100 text-white"
     [ngClass]="{ yellow: card.indeck }"
     (mouseover)="cardActiveHover(card)"
     (click)="selected(card)"
   >
-    <p class="text-center text-white text-xl bg-black border">
-      {{ card.name }}
-    </p>
-    <img
-      [src]="card.img"
-      [alt]="card.name"
-      class="rounded-xl border shadow-md"
-    />
-    <div class="bg-black p-2 bg-opacity-50 rounded-xl text-white border">
-      <div class="flex justify-center items-center gap-2 mb-4">
-        <div
-          class="flex flex-col justify-center items-center gap-2 xl:flex-row"
-        >
-          <img
-            src="/utilities/icons/arena/hp.webp"
-            alt="hp icon"
-            class="rounded-full max-h-10 shadow-md"
-          />
-          {{ card.hp }}
-        </div>
-        <div
-          class="flex flex-col justify-center items-center gap-2 xl:flex-row"
-        >
-          <img
-            src="/utilities/icons/arena/stamina.webp"
-            alt="hp icon"
-            class="rounded-full max-h-10 shadow-md"
-          />
-          {{ card.stamina }}
-        </div>
+    <div class="relative inline-block">
+      <img src="/utilities/cardasset.png" alt="asset" class="w-full" />
+      <div
+        class="absolute top-0 right-0 flex justify-center items-center z-30 w-[23%] h-[20%]"
+      >
+        <p class="bg-opacity-40 px-1 rounded-full">{{ card.hp }}</p>
       </div>
-      <div class="flex justify-center items-center gap-5">
-        <div
-          class="flex justify-center items-center flex-col gap-2 xl:flex-row"
-        >
-          <img
-            src="/utilities/icons/arena/atk.webp"
-            alt="hp icon"
-            class="rounded-full max-h-8 shadow-md"
-          />
+      <div
+        class="absolute top-[59%] right-[5%] flex justify-center items-center z-30 w-[23%] h-[20%]"
+      >
+        <p class="bg-black bg-opacity-40 px-1 rounded-full">{{ card.speed }}</p>
+      </div>
+      <div
+        class="absolute top-[59%] right-[71%] flex justify-center items-center z-30 w-[23%] h-[20%]"
+      >
+        <p class="bg-black bg-opacity-40 px-1 rounded-full">{{ card.def }}</p>
+      </div>
+      <div
+        class="absolute top-[80%] right-[0] flex justify-center items-center z-30 w-[23%] h-[20%]"
+      >
+        <p class="bg-black bg-opacity-40 px-1 rounded-full">
+          {{ card.stamina }}
+        </p>
+      </div>
+      <div
+        class="absolute top-[80%] right-[77%] flex justify-center items-center z-30 w-[23%] h-[20%]"
+      >
+        <p class="bg-black bg-opacity-40 px-1 rounded-full">
           {{ card.atk }}
-        </div>
-        <div
-          class="flex justify-center items-center flex-col gap-2 xl:flex-row"
-        >
-          <img
-            src="/utilities/icons/arena/def.webp"
-            alt="hp icon"
-            class="rounded-full max-h-8 shadow-md"
-          />
-          {{ card.def }}
-        </div>
-        <div
-          class="flex justify-center items-center flex-col gap-2 xl:flex-row"
-        >
-          <img
-            src="/utilities/icons/arena/speed.webp"
-            alt="hp icon"
-            class="rounded-full max-h-8 shadow-md"
-          />
-          {{ card.speed }}
-        </div>
+        </p>
       </div>
     </div>
   </li>
