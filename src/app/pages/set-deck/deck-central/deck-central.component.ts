@@ -15,14 +15,20 @@ deck!:iMonster[]
 
 monsterRemoved!: iMonster
 
-@Output() sendRemovedFromDeck = new EventEmitter<iMonster>
 @Input() deckCounter!:number
+
+@Output() sendRemovedFromDeck = new EventEmitter<iMonster>
+
+
 
 removeFromDeck(card:iMonster) {
 card.indeck = !card.indeck
 this.deckSvc.removeCard(card.id)
 this.monsterRemoved = card
+this.startGame = !this.startGame
+this.deckCounter--
 this.sendRemovedFromDeck.emit(this.monsterRemoved)
+
 }
 
 ngOnInit() {

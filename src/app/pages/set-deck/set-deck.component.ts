@@ -13,8 +13,11 @@ background:string = "url(/utilities/logo.png)"
 
 monsterToLeaveYellow!:iMonster
 
+secondCounter!:number
+
 notYellow(monster:iMonster) {
 this.monsterToLeaveYellow = monster
+
 }
 
   bigCard(monster:iMonster) {
