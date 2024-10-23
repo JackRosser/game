@@ -1,6 +1,6 @@
 <div
   *ngIf="bigMonster"
-  class="h-full p-5 bg-cover bg-no-repeat bg-bottom flex gap-5"
+  class="h-full w-full p-5 bg-cover bg-no-repeat bg-bottom flex gap-5 relative"
   [style.backgroundImage]="'url(' + bigMonster.sfondo + ')'"
 >
   <img
@@ -8,46 +8,58 @@
     alt="mostro in evidenza"
     class="h-full outline-2 outline-offset-2 outline-double outline-white border"
   />
-  <div class="flex flex-col h-full justify-around text-white">
-    <div class="flex gap-3 justify-start items-center">
-      <img
-        src="/utilities/icons/arena/hp.webp"
-        alt="hp icon"
-        class="rounded-full max-h-10"
-      />
-      {{ bigMonster.hp }}
+  <div class="bg-black bg-opacity-50 w-full p-5 backdrop-blur-sm border">
+    <div class="flex flex-col h-full justify-around text-white">
+      <div class="flex gap-3 justify-start items-center">
+        <img
+          src="/utilities/icons/arena/hp.webp"
+          alt="hp icon"
+          class="rounded-full max-h-10"
+        />
+        {{ bigMonster.hp }}
+      </div>
+      <div class="flex gap-3 justify-start items-center">
+        <img
+          src="/utilities/icons/arena/stamina.webp"
+          alt="stamina icon"
+          class="rounded-full max-h-10"
+        />
+        {{ bigMonster.stamina }}
+      </div>
+      <div class="flex gap-3 justify-start items-center">
+        <img
+          src="/utilities/icons/arena/atk.webp"
+          alt="atk icon"
+          class="rounded-full max-h-10"
+        />
+        {{ bigMonster.atk }}
+      </div>
+      <div class="flex gap-3 justify-start items-center">
+        <img
+          src="/utilities/icons/arena/def.webp"
+          alt="def icon"
+          class="rounded-full max-h-10"
+        />
+        {{ bigMonster.def }}
+      </div>
+      <div class="flex gap-3 justify-start items-center">
+        <img
+          src="/utilities/icons/arena/speed.webp"
+          alt="speed icon"
+          class="rounded-full max-h-10"
+        />
+        {{ bigMonster.speed }}
+      </div>
     </div>
-    <div class="flex gap-3 justify-start items-center">
-      <img
-        src="/utilities/icons/arena/stamina.webp"
-        alt="stamina icon"
-        class="rounded-full max-h-10"
-      />
-      {{ bigMonster.stamina }}
-    </div>
-    <div class="flex gap-3 justify-start items-center">
-      <img
-        src="/utilities/icons/arena/atk.webp"
-        alt="atk icon"
-        class="rounded-full max-h-10"
-      />
-      {{ bigMonster.atk }}
-    </div>
-    <div class="flex gap-3 justify-start items-center">
-      <img
-        src="/utilities/icons/arena/def.webp"
-        alt="def icon"
-        class="rounded-full max-h-10"
-      />
-      {{ bigMonster.def }}
-    </div>
-    <div class="flex gap-3 justify-start items-center">
-      <img
-        src="/utilities/icons/arena/speed.webp"
-        alt="speed icon"
-        class="rounded-full max-h-10"
-      />
-      {{ bigMonster.speed }}
+    <div
+      class="absolute right-5 bottom-10 flex flex-col items-end text-white xl:right-20"
+    >
+      <h1 class="text-[2rem] lg:text-[4rem]">{{ bigMonster.name }}</h1>
+      <p
+        class="text-end max-w-[200px] lg:max-w-[300px] xl:max-w-[500px] text-[0.8rem] lg:text-[1rem]"
+      >
+        {{ bigMonster.description }}
+      </p>
     </div>
   </div>
 </div>
