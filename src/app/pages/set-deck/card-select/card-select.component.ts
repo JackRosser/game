@@ -23,6 +23,10 @@ cardActiveHover(monster:iMonster) {
   this.cardToDad.emit(this.cardActive)
 }
 
+selected(card:iMonster) {
+  card.indeck = !card.indeck
+}
+
 ngOnInit() {
   this.allSvc.allCard$.subscribe(allCardsList => {
     this.cardsList = allCardsList.sort((a, b) => a.name.localeCompare(b.name));
