@@ -2,11 +2,27 @@
   <ul class="grid grid-cols-3 gap-3 xl:grid-cols-4">
     <li
       *ngFor="let card of deck"
-      class="flex flex-col items-center bg-black border shadow-md cursor-pointer hover:border-yellow-300 hover:border-[2px]"
+      class="flex flex-col items-center bg-black shadow-md cursor-pointer hover:border-yellow-300 hover:border-[2px]"
       (click)="removeFromDeck(card)"
     >
-      <h2 class="text-white">{{ card.name }}</h2>
-      <img [src]="card.img" alt="{{ card.name }}" class="max-w-full" />
+      <div class="relative inline-block">
+        <img
+          src="/utilities/cardasset.png"
+          alt="asset"
+          class="relative w-full z-40"
+        />
+
+        <div
+          class="absolute top-[0] left-[0] flex justify-center items-center z-20 w-[23%] h-[20%]"
+        >
+          <img [src]="card.icon" alt="icon" class="rounded-full max-h-[65%]" />
+        </div>
+        <div
+          class="absolute top-[28%] left-[36%] flex justify-center items-center z-10 w-[23%] h-[20%]"
+        >
+          <img [src]="card.img" alt="icon" class="max-w-[350%]" />
+        </div>
+      </div>
     </li>
     <li>
       <button
