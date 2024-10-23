@@ -1,6 +1,6 @@
 <div
   *ngIf="bigMonster"
-  class="h-full p-5 bg-cover bg-no-repeat bg-bottom"
+  class="h-full p-5 bg-cover bg-no-repeat bg-bottom flex gap-5"
   [style.backgroundImage]="'url(' + bigMonster.sfondo + ')'"
 >
   <img
@@ -8,4 +8,46 @@
     alt="mostro in evidenza"
     class="h-full outline-2 outline-offset-2 outline-double outline-white border"
   />
+  <div class="flex flex-col h-full justify-around text-white">
+    <div class="flex gap-3 justify-start items-center">
+      <img
+        src="/utilities/icons/arena/hp.webp"
+        alt="hp icon"
+        class="rounded-full max-h-10"
+      />
+      {{ bigMonster.hp }}
+    </div>
+    <div class="flex gap-3 justify-start items-center">
+      <img
+        src="/utilities/icons/arena/stamina.webp"
+        alt="stamina icon"
+        class="rounded-full max-h-10"
+      />
+      {{ bigMonster.stamina }}
+    </div>
+    <div class="flex gap-3 justify-start items-center">
+      <img
+        src="/utilities/icons/arena/atk.webp"
+        alt="atk icon"
+        class="rounded-full max-h-10"
+      />
+      {{ bigMonster.atk }}
+    </div>
+    <div class="flex gap-3 justify-start items-center">
+      <img
+        src="/utilities/icons/arena/def.webp"
+        alt="def icon"
+        class="rounded-full max-h-10"
+      />
+      {{ bigMonster.def }}
+    </div>
+    <div class="flex gap-3 justify-start items-center">
+      <img
+        src="/utilities/icons/arena/speed.webp"
+        alt="speed icon"
+        class="rounded-full max-h-10"
+      />
+      {{ bigMonster.speed }}
+    </div>
+  </div>
 </div>
