@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { AllcardsService } from '../../../services/allcards.service';
 import { iMonster } from '../../../models/i-monsters';
+import { DeckService } from '../../../services/deck.service';
 
 @Component({
   selector: 'app-card-select',
@@ -9,7 +10,7 @@ import { iMonster } from '../../../models/i-monsters';
 })
 export class CardSelectComponent {
 
-constructor(private allSvc:AllcardsService) {}
+constructor(private allSvc:AllcardsService, private deckSvc:DeckService) {}
 
 cardsList!:iMonster[]
 
@@ -23,9 +24,16 @@ cardActiveHover(monster:iMonster) {
   this.cardToDad.emit(this.cardActive)
 }
 
-selected(card:iMonster) {
-  card.indeck = !card.indeck
+selected(card: iMonster) {
+  card.indeck = !card.indeck;
+
+  if (card.indeck) {
+    this.deckSvc.addCard(card);
+  } else {
+    this.deckSvc.removeCard(card.id);
+  }
 }
+
 
 ngOnInit() {
   this.allSvc.allCard$.subscribe(allCardsList => {
