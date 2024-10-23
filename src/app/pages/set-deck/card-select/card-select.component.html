@@ -10,35 +10,54 @@
     (click)="selected(card)"
   >
     <div class="relative inline-block">
-      <img src="/utilities/cardasset.png" alt="asset" class="w-full" />
+      <img
+        src="/utilities/cardasset.png"
+        alt="asset"
+        class="relative w-full z-40"
+      />
       <div
-        class="absolute top-0 right-0 flex justify-center items-center z-30 w-[23%] h-[20%]"
+        class="absolute top-0 right-0 flex justify-center items-center z-40 w-[23%] h-[20%]"
       >
         <p class="bg-opacity-40 px-1 rounded-full">{{ card.hp }}</p>
       </div>
       <div
-        class="absolute top-[59%] right-[5%] flex justify-center items-center z-30 w-[23%] h-[20%]"
+        class="absolute top-[59%] right-[5%] flex justify-center items-center z-40 w-[23%] h-[20%]"
       >
         <p class="bg-black bg-opacity-40 px-1 rounded-full">{{ card.speed }}</p>
       </div>
       <div
-        class="absolute top-[59%] right-[71%] flex justify-center items-center z-30 w-[23%] h-[20%]"
+        class="absolute top-[59%] right-[71%] flex justify-center items-center z-40 w-[23%] h-[20%]"
       >
         <p class="bg-black bg-opacity-40 px-1 rounded-full">{{ card.def }}</p>
       </div>
       <div
-        class="absolute top-[80%] right-[0] flex justify-center items-center z-30 w-[23%] h-[20%]"
+        class="absolute top-[80%] right-[0] flex justify-center items-center z-40 w-[23%] h-[20%]"
       >
         <p class="bg-black bg-opacity-40 px-1 rounded-full">
           {{ card.stamina }}
         </p>
       </div>
       <div
-        class="absolute top-[80%] right-[77%] flex justify-center items-center z-30 w-[23%] h-[20%]"
+        class="absolute top-[80%] right-[77%] flex justify-center items-center z-40 w-[23%] h-[20%]"
       >
         <p class="bg-black bg-opacity-40 px-1 rounded-full">
           {{ card.atk }}
         </p>
+      </div>
+      <div
+        class="absolute top-[0] left-[0] flex justify-center items-center z-20 w-[23%] h-[20%]"
+      >
+        <img [src]="card.icon" alt="icon" class="rounded-full max-h-[65%]" />
+      </div>
+      <div
+        class="absolute top-[28%] left-[36%] flex justify-center items-center z-10 w-[23%] h-[20%]"
+      >
+        <img [src]="card.img" alt="icon" class="max-w-[350%]" />
+      </div>
+      <div
+        class="absolute bottom-[15%] left-[20%] flex justify-center items-center z-40 w-[60%] text-center"
+      >
+        <p>{{ card.name }}</p>
       </div>
     </div>
   </li>
