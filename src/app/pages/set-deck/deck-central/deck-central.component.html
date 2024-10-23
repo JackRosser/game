@@ -1,1 +1,5 @@
-<p class="text-white border">central</p>
+<ul *ngIf="deck.length > 0">
+  <li *ngFor="let card of deck">
+    {{ card.name }}
+  </li>
+</ul>
