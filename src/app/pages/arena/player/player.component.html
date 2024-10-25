@@ -1,7 +1,7 @@
 <section
   class="absolute bottom-0 w-full h-full z-10 flex flex-col items-center justify-evenly p-5"
 >
-  <div class="border w-[40%] md:w-1/4 lg:w-[20%] xl:w-[15%] 2xl:w-[15%]">
+  <div class="w-[40%] md:w-1/4 lg:w-[20%] xl:w-[15%] 2xl:w-[15%]">
     <div
       *ngIf="playerInGame"
       class="flex flex-col gap-3 bg-cover bg-center cursor-pointer hover:brightness-110 transition-transform duration-100 text-white"
@@ -66,71 +66,13 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="border w-[40%] md:w-1/4 lg:w-[20%] xl:w-[15%] 2xl:w-[15%]">
-    <div
-      *ngIf="playerInGame"
-      class="flex flex-col gap-3 bg-cover bg-center cursor-pointer hover:brightness-110 transition-transform duration-100 text-white"
-    >
-      <div class="relative inline-block">
-        <img
-          src="/utilities/cardasset.png"
-          alt="asset"
-          class="relative w-full z-40"
-        />
-        <div
-          class="absolute top-0 right-0 flex justify-center items-center z-40 w-[23%] h-[20%]"
-        >
-          <p class="bg-opacity-40 px-1 rounded-full">{{ playerInGame.hp }}</p>
-        </div>
-        <div
-          class="absolute top-[59%] right-[5%] flex justify-center items-center z-40 w-[23%] h-[20%]"
-        >
-          <p class="bg-black bg-opacity-40 px-1 rounded-full">
-            {{ playerInGame.speed }}
-          </p>
-        </div>
-        <div
-          class="absolute top-[59%] right-[71%] flex justify-center items-center z-40 w-[23%] h-[20%]"
-        >
-          <p class="bg-black bg-opacity-40 px-1 rounded-full">
-            {{ playerInGame.def }}
-          </p>
-        </div>
-        <div
-          class="absolute top-[80%] right-[0] flex justify-center items-center z-40 w-[23%] h-[20%]"
-        >
-          <p class="bg-black bg-opacity-40 px-1 rounded-full">
-            {{ playerInGame.stamina }}
-          </p>
-        </div>
-        <div
-          class="absolute top-[80%] right-[77%] flex justify-center items-center z-40 w-[23%] h-[20%]"
-        >
-          <p class="bg-black bg-opacity-40 px-1 rounded-full">
-            {{ playerInGame.atk }}
-          </p>
-        </div>
-        <div
-          class="absolute top-[0] left-[0] flex justify-center items-center z-20 w-[23%] h-[20%]"
-        >
-          <img
-            [src]="playerInGame.icon"
-            alt="icon"
-            class="rounded-full max-h-[65%]"
-          />
-        </div>
-        <div
-          class="absolute top-[27%] left-[38.5%] flex justify-center items-center z-10 w-[23%] h-[20%] scale-[1]"
-        >
-          <img [src]="playerInGame.img" alt="icon" class="max-w-[350%]" />
-        </div>
-        <div
-          class="absolute bottom-[15%] left-[20%] flex justify-center items-center z-40 w-[60%] text-center"
-        >
-          <p>{{ playerInGame.name }}</p>
-        </div>
-      </div>
+    <div class="w-full mt-3 flex flex-col items-start gap-2">
+      <div
+        [style.width.%]="hpBar"
+        [style.transform]="'scale(' + scale + ')'"
+        [class]="cardClass"
+      ></div>
+      <div class="w-full bg-sky-400 p-2 border shadow-md"></div>
     </div>
   </div>
 </section>
