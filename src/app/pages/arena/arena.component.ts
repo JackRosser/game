@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DeckService } from '../../services/deck.service';
+import { iMonster } from '../../models/i-monsters';
 
 @Component({
   selector: 'app-arena',
@@ -9,6 +10,7 @@ import { DeckService } from '../../services/deck.service';
 export class ArenaComponent {
 
 constructor(private deckSvc:DeckService) {}
+
 
 
 
