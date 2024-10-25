@@ -5,7 +5,7 @@ const routes: Routes = [
   {
   path: "",
   // redirectTo: "start-page",
-  redirectTo: "set-deck",
+  redirectTo: "arena",
   pathMatch: "full",
   },
   { path: 'start-page',
@@ -15,7 +15,8 @@ const routes: Routes = [
   { path: 'set-deck',
     loadChildren: () => import('./pages/set-deck/set-deck.module').then(m => m.SetDeckModule),
   title: "ElementFight! - Deck"
-  }
+  },
+  { path: 'arena', loadChildren: () => import('./pages/arena/arena.module').then(m => m.ArenaModule) }
 ];
 
 @NgModule({

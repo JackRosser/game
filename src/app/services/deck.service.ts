@@ -2,40 +2,51 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { iMonster } from '../models/i-monsters';
+import { environment } from '../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DeckService {
 
-  constructor(private http:HttpClient) { this.getDeckCards()}
+  constructor(private http:HttpClient) { this.getPlayerCards(), this.getOpponentCards()}
 
-urlDeck:string = "http://localhost:3000/deckPlayer"
 
-private bhDeck = new BehaviorSubject<iMonster[]>([])
-deck$ = this.bhDeck.asObservable()
+
+private bhPlayerDeck = new BehaviorSubject<iMonster[]>([])
+deck$ = this.bhPlayerDeck.asObservable()
 serviceArray!:iMonster[]
 
 
-private getDeckCards() {
-  this.http.get<iMonster[]>(this.urlDeck).subscribe((cardList) => {
+private bhOpponentCards = new BehaviorSubject<iMonster[]>([])
+opponent$ = this.bhOpponentCards.asObservable()
+
+private getOpponentCards():void {
+  this.http.get<iMonster[]>(environment.urlDeckOpponent).subscribe(list => {
+    this.bhOpponentCards.next(list)
+  })
+}
+
+
+private getPlayerCards() {
+  this.http.get<iMonster[]>(environment.urlDeck).subscribe((cardList) => {
   this.serviceArray = cardList
-  this.bhDeck.next(cardList)
+  this.bhPlayerDeck.next(cardList)
 })
 
 }
 
 addCard(card:Partial<iMonster>) {
-this.http.post<iMonster>(this.urlDeck, card).subscribe((newCard) => {
+this.http.post<iMonster>(environment.urlDeck, card).subscribe((newCard) => {
   this.serviceArray.push(newCard)
-  this.bhDeck.next(this.serviceArray)
+  this.bhPlayerDeck.next(this.serviceArray)
 })
 }
 
 removeCard(id: number) {
-  this.http.delete(`${this.urlDeck}/${id}`).subscribe(() => {
+  this.http.delete(`${environment.urlDeck}/${id}`).subscribe(() => {
     this.serviceArray = this.serviceArray.filter(card => card.id !== id);
-    this.bhDeck.next(this.serviceArray);
+    this.bhPlayerDeck.next(this.serviceArray);
   });
 }
 
