@@ -1,0 +1,12 @@
+@keyframes rotatechange {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.change {
+  animation: rotatechange 1s infinite both linear;
+}

@@ -28,6 +28,13 @@ cardStyle:string = `width: ${this.full}%`
 
 scale:number = 1
 
+changeToggle:boolean = false
+
+overChange():void {
+  this.changeToggle = !this.changeToggle
+}
+
+
 // REGOLAZIONE STILE GRAFICO
 
 ngOnInit() {
