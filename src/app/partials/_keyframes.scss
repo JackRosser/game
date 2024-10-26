@@ -1,3 +1,5 @@
+// ROTAZIONE CHANGE
+
 @keyframes rotatechange {
   from {
     transform: rotate(0);
@@ -9,4 +11,76 @@
 
 .change {
   animation: rotatechange 1s infinite both linear;
+}
+
+// ATTACCO PLAYER
+
+@keyframes attak-animation-lg {
+  from {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes attak-animation-mobile {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.attak {
+  animation: attak-animation-mobile 500ms both;
+}
+
+@media screen and (min-width: 768px) {
+  .attak {
+    animation: attak-animation-lg 500ms both;
+  }
+}
+
+// ATTACCO OPPONENT
+
+@keyframes attak-opponent-lg {
+  from {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes attak-opponent-mobile {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.attak-opponent {
+  animation: attak-opponent-mobile 500ms both;
+}
+
+@media screen and (min-width: 768px) {
+  .attak-opponent {
+    animation: attak-opponent-lg 500ms both;
+  }
 }

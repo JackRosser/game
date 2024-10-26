@@ -1,8 +1,16 @@
 <div>
   <div
     *ngIf="opponentInGame"
-    class="flex flex-col gap-3 bg-cover bg-center cursor-pointer hover:brightness-110 transition-transform duration-100 text-white"
+    class="flex flex-col gap-3 bg-cover bg-center cursor-pointer hover:brightness-110 transition-transform duration-100 text-white attak-opponent"
   >
+    <div class="w-full mt-3 flex flex-col items-start gap-2 lg:hidden">
+      <div
+        [style.width.%]="hpBar"
+        [style.transform]="'scale(' + scale + ')'"
+        [class]="cardClass"
+      ></div>
+      <div class="w-full bg-sky-400 p-1 border shadow-md"></div>
+    </div>
     <div class="relative inline-block">
       <img
         src="/utilities/cardasset.png"
@@ -63,7 +71,7 @@
       </div>
     </div>
   </div>
-  <div class="w-full mt-3 flex flex-col items-start gap-2">
+  <div class="w-full mt-3 lg:flex flex-col items-start gap-2 hidden">
     <div
       [style.width.%]="hpBar"
       [style.transform]="'scale(' + scale + ')'"
