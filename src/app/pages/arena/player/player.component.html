@@ -2,7 +2,11 @@
   class="absolute bottom-0 w-full h-full z-10 flex flex-col items-center justify-evenly p-5 lg:flex-row-reverse"
 >
   <div class="w-[40%] md:w-1/4 lg:w-[20%] xl:w-[15%] 2xl:w-[15%]">
-    <app-opponent [toggleAnimation]="toggleAnimation"></app-opponent>
+    <app-opponent
+      [toggleAnimation]="toggleAnimation"
+      [opponentHpBar]="opponentHpBar"
+      [opponentScale]="opponentScale"
+    ></app-opponent>
   </div>
   <div class="w-[40%] md:w-1/4 lg:w-[20%] xl:w-[15%] 2xl:w-[15%]">
     <div

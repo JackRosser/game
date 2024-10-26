@@ -5,8 +5,8 @@
   >
     <div class="w-full mt-3 flex flex-col items-start gap-2 lg:hidden">
       <div
-        [style.width.%]="hpBar"
-        [style.transform]="'scale(' + scale + ')'"
+        [style.width.%]="opponentHpBar"
+        [style.transform]="'scale(' + opponentScale + ')'"
         [class]="cardClass"
       ></div>
       <div class="w-full bg-sky-400 p-1 border shadow-md"></div>
@@ -76,8 +76,8 @@
   </div>
   <div class="w-full mt-3 lg:flex flex-col items-start gap-2 hidden">
     <div
-      [style.width.%]="hpBar"
-      [style.transform]="'scale(' + scale + ')'"
+      [style.width.%]="opponentHpBar"
+      [style.transform]="'scale(' + opponentScale + ')'"
       [class]="cardClass"
     ></div>
     <div class="w-full bg-sky-400 p-1 border shadow-md"></div>

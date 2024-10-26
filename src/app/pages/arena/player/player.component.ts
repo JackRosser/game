@@ -38,6 +38,14 @@ toggleAnimation:boolean = false
 
 // REGOLAZIONE STILE GRAFICO
 
+// OPPONENT
+
+opponentHpBar:number = 100
+opponentScale:number = 1
+
+// OPPONENT
+
+
 battle() {
   this.toggleAnimation = true
   setTimeout(() => {
