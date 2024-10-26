@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DeckService } from '../../../services/deck.service';
 import { iMonster } from '../../../models/i-monsters';
 
@@ -27,6 +27,8 @@ cardClass:string = this.full
 cardStyle:string = `width: ${this.full}%`
 
 scale:number = 1
+
+@Input() toggleAnimation!:boolean
 
 // REGOLAZIONE STILE GRAFICO
 

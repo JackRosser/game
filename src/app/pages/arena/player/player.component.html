@@ -2,12 +2,13 @@
   class="absolute bottom-0 w-full h-full z-10 flex flex-col items-center justify-evenly p-5 lg:flex-row-reverse"
 >
   <div class="w-[40%] md:w-1/4 lg:w-[20%] xl:w-[15%] 2xl:w-[15%]">
-    <app-opponent></app-opponent>
+    <app-opponent [toggleAnimation]="toggleAnimation"></app-opponent>
   </div>
   <div class="w-[40%] md:w-1/4 lg:w-[20%] xl:w-[15%] 2xl:w-[15%]">
     <div
       *ngIf="playerInGame"
-      class="flex flex-col gap-3 bg-cover bg-center cursor-pointer hover:brightness-110 transition-transform duration-100 text-white attak"
+      class="flex flex-col gap-3 bg-cover bg-center cursor-pointer hover:brightness-110 transition-transform duration-100 text-white"
+      [ngClass]="{ attak: toggleAnimation }"
     >
       <div class="relative inline-block">
         <img
@@ -83,6 +84,7 @@
       src="/utilities/icons/arena/attacco.webp"
       alt="atk"
       class="rounded-full max-h-[4.5rem] cursor-pointer transition-transform duration-300 hover:scale-110 active:scale-95"
+      (click)="battle()"
     />
     <img
       src="/utilities/icons/arena/scambio.webp"

@@ -34,8 +34,17 @@ overChange():void {
   this.changeToggle = !this.changeToggle
 }
 
+toggleAnimation:boolean = false
 
 // REGOLAZIONE STILE GRAFICO
+
+battle() {
+  this.toggleAnimation = true
+  setTimeout(() => {
+    this.toggleAnimation = false
+  }, 500);
+}
+
 
 ngOnInit() {
   this.deckSvc.deck$.subscribe(list => {

@@ -1,7 +1,7 @@
 <div>
   <div
     *ngIf="opponentInGame"
-    class="flex flex-col gap-3 bg-cover bg-center cursor-pointer hover:brightness-110 transition-transform duration-100 text-white attak-opponent"
+    class="flex flex-col gap-3 bg-cover bg-center cursor-pointer hover:brightness-110 transition-transform duration-100 text-white"
   >
     <div class="w-full mt-3 flex flex-col items-start gap-2 lg:hidden">
       <div
@@ -11,7 +11,10 @@
       ></div>
       <div class="w-full bg-sky-400 p-1 border shadow-md"></div>
     </div>
-    <div class="relative inline-block">
+    <div
+      class="relative inline-block"
+      [ngClass]="{ 'attak-opponent': toggleAnimation }"
+    >
       <img
         src="/utilities/cardasset.png"
         alt="asset"
